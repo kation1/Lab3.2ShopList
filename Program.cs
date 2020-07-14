@@ -11,14 +11,14 @@ namespace Lab3._2ShoppingList
         {
             Dictionary<string, decimal> menu = new Dictionary<string, decimal>();
 
-            menu.Add("Item1", (decimal)1.99);
-            menu.Add("Item2", (decimal)1.99);
-            menu.Add("Item3", (decimal)1.99);
-            menu.Add("Item4", (decimal)3.99);
-            menu.Add("Item5", (decimal)1.99);
-            menu.Add("Item6", (decimal)9.99);
-            menu.Add("Item7", (decimal)1.99);
-            menu.Add("Item8", (decimal)2.99);
+            menu.Add("Basil", (decimal)1.99);
+            menu.Add("Parsley", (decimal)1.99);
+            menu.Add("Chives", (decimal)1.99);
+            menu.Add("Rosemary", (decimal)3.99);
+            menu.Add("Thyme", (decimal)1.99);
+            menu.Add("Cilantro", (decimal)9.99);
+            menu.Add("Pepper", (decimal)1.99);
+            menu.Add("Salt", (decimal)2.99);
 
             ArrayList itemsOrdered = new ArrayList();
             ArrayList itemPrices = new ArrayList();
@@ -30,10 +30,11 @@ namespace Lab3._2ShoppingList
             while (userContinue != "n" || userContinue != "n")
             {
                 Console.WriteLine("Welcome!\n ~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                Console.WriteLine($"Item \t price");
+                Console.WriteLine($"Item \t \tprice");
                 foreach (var item in menu)
                 {
-                    Console.Write($"{item.Key} \t {item.Value}\n");
+                    Console.Write("{0,-10}", item.Key); 
+                        Console.WriteLine($"\t{item.Value}\n");
                 }
 
                 //Ask User for item selection
