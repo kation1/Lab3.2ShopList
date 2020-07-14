@@ -29,12 +29,13 @@ namespace Lab3._2ShoppingList
             string userContinue = "y";
             while (userContinue != "n" || userContinue != "n")
             {
-                Console.WriteLine("Welcome!\n ~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                Console.WriteLine($"Item \t \tprice");
+                Console.WriteLine("Welcome!\n ");
+                Console.WriteLine($"Item \t \tprice\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+   
                 foreach (var item in menu)
                 {
                     Console.Write("{0,-10}", item.Key); 
-                        Console.WriteLine($"\t{item.Value}\n");
+                        Console.WriteLine($"\t{item.Value}");
                 }
 
                 //Ask User for item selection
@@ -68,7 +69,7 @@ namespace Lab3._2ShoppingList
             Console.WriteLine("Here's the receipt of your order");
             for (int index = 0; index < itemsOrdered.Count; index++)
             {
-                Console.WriteLine($"{itemsOrdered[index]}\t {itemPrices[index]}");
+                Console.WriteLine($"{itemsOrdered[index],-10}\t " + $"{itemPrices[index]}");
             }
 
             decimal total = 0;
